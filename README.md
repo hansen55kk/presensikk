@@ -1,3 +1,7 @@
+Prerequisite:
+- Git
+- Composer
+
 Prosedur instalasi presensikk:
 - git clone https://github.com/hansen55kk/presensikk.git
 - cd presensikk
