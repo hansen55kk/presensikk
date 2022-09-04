@@ -65,7 +65,9 @@ class DashboardController extends Controller
             // dd($tableNewest);
             return view('pages.dashboard', compact('pegawai', 'today', 'history', 'dayHistory', 'monthHistory', 'monthCountHistory', 'total', 'lastAdded', 'lastScan', 'thisYearTotal', 'tableNewest'));
         } else {
-            return view('pages.empty', compact('pegawai'));
+            $lastAdded = Pegawai::get('created_at')->last();
+            $lastAdded = $lastAdded->created_at;
+            return view('pages.empty', compact('pegawai', 'lastAdded'));
         }
     }
 }
