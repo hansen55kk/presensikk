@@ -14,6 +14,8 @@ class DashboardController extends Controller
         if (Auth::user() == null)
             return redirect('login');
         $pegawai = Pegawai::get()->count();
+        $lastAdded = Pegawai::get('created_at')->last();
+        $lastAdded = $lastAdded->created_at;
         if ($pegawai == 0)
             return redirect('pegawai');
         $totalAbsen = Absen::get()->count();
@@ -56,8 +58,8 @@ class DashboardController extends Controller
                 array_push($monthCountHistory, $monthCount);
             }
             $total = Absen::get()->count();
-            $lastAdded = Pegawai::get('created_at')->last();
-            $lastAdded = $lastAdded->created_at;
+            // $lastAdded = Pegawai::get('created_at')->last();
+            // $lastAdded = $lastAdded->created_at;
             $lastScan = Absen::get('created_at')->last();
             $lastScan = $lastScan->created_at;
             $thisYearTotal = Absen::where('created_at', '>=', date('Y-m-d', mktime(0, 0, 0, 1, 1, $yearNow)))->where('created_at', '<=', date('Y-m-d', mktime(23, 59, 59, 12, 31, $yearNow)))->count();
@@ -65,8 +67,6 @@ class DashboardController extends Controller
             // dd($tableNewest);
             return view('pages.dashboard', compact('pegawai', 'today', 'history', 'dayHistory', 'monthHistory', 'monthCountHistory', 'total', 'lastAdded', 'lastScan', 'thisYearTotal', 'tableNewest'));
         } else {
-            $lastAdded = Pegawai::get('created_at')->last();
-            $lastAdded = $lastAdded->created_at;
             return view('pages.empty', compact('pegawai', 'lastAdded'));
         }
     }
