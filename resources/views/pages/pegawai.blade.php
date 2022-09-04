@@ -37,7 +37,6 @@
             font-size: 12px;
         }
 
-        .dt-button.buttons-excel.buttons-html5 {}
 
         .dt-button.buttons-pdf.buttons-html5,
         .dt-button.buttons-csv.buttons-html5 {
