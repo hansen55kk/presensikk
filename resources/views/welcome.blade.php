@@ -7,23 +7,6 @@
                     <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                         <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
                             <h4 class="text-white font-weight-bolder text-center mt-0 mb-0">Welcome to PresensiKK</h4>
-                            {{-- <div class="row mt-3">
-                                        <div class="col-2 text-center ms-auto">
-                                            <a class="btn btn-link px-3" href="javascript:;">
-                                                <i class="fa fa-facebook text-white text-lg"></i>
-                                            </a>
-                                        </div>
-                                        <div class="col-2 text-center px-1">
-                                            <a class="btn btn-link px-3" href="javascript:;">
-                                                <i class="fa fa-github text-white text-lg"></i>
-                                            </a>
-                                        </div>
-                                        <div class="col-2 text-center me-auto">
-                                            <a class="btn btn-link px-3" href="javascript:;">
-                                                <i class="fa fa-google text-white text-lg"></i>
-                                            </a>
-                                        </div>
-                                    </div> --}}
                         </div>
                     </div>
                     <div class="card-body d-flex justify-center flex-row justify-content-center">
@@ -35,14 +18,6 @@
             </div>
         </div>
     </div>
-    {{-- <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="d-flex">
-            <div class="toast-body">
-                Hello, world! This is a toast message.
-            </div>
-            <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-        </div>
-    </div> --}}
 @endsection
 @section('custom_script')
     <script>
